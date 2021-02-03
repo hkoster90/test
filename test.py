@@ -18,6 +18,7 @@ def transformOT(inputFile, outputfile):
     #looping through the file and store each column per row of the file into the lists above
     with ot_file as csv_file:
         csvData = csv.reader(csv_file)
+        #skip header row
         next(csvData)
         for line in csvData:
             campaign = line[0]
